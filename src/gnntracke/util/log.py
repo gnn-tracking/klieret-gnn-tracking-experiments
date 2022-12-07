@@ -1,8 +1,8 @@
 # std
-import colorlog
 import logging
 from typing import Union
 
+import colorlog
 
 LOG_DEFAULT_LEVEL = logging.DEBUG
 
