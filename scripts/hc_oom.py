@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-from typing import Any
 
-from gnn_tracking.metrics.losses import EdgeWeightFocalLoss
 from gnn_tracking.models.track_condensation_networks import PreTrainedECGraphTCN
-from gnn_tracking.training.tcn_trainer import TCNTrainer
 from gnn_tracking.utils.dictionaries import subdict_with_prefix_stripped
 from gnn_tracking_hpo.util.paths import add_scripts_path
 from torch import nn
