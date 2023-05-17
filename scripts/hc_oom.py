@@ -7,11 +7,11 @@ from torch import nn
 
 add_scripts_path()
 
-from gnn_tracking_hpo.trainable import (
-    TCNTrainable,
+from gnn_tracking_hpo.defaults import (
     legacy_config_compatibility,
     suggest_default_values,
 )
+from gnn_tracking_hpo.trainable import DefaultTrainable
 from gnn_tracking_hpo.util.paths import get_config
 from tune_ec import ECTrainable
 
@@ -73,7 +73,7 @@ def get_hc_config():
     return config
 
 
-class PretrainedECTrainable(TCNTrainable):
+class PretrainedECTrainable(DefaultTrainable):
     def get_model(self) -> nn.Module:
         ec = get_ec(get_ec_config(), freeze=True)
         model = PreTrainedECGraphTCN(
