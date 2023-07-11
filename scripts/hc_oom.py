@@ -88,4 +88,4 @@ class PretrainedECTrainable(DefaultTrainable):
 trainable = PretrainedECTrainable(get_hc_config())
 # trainable = ECTrainable(get_ec_config())
 trainer = trainable.trainer
-trainer.train_step(max_batches=300)
+trainer.training_step(max_batches=300)
